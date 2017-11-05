@@ -44,8 +44,13 @@ body{
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 37px 16px;
     text-decoration: none;
+}
+
+.navbar a:hover{
+  color: rgb(135,200,180);
+  transition: .5s all;
 }
 
 #current {
