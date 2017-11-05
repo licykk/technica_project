@@ -58,7 +58,7 @@ body {
     
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
+    background-color: white;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -71,17 +71,35 @@ header {
 }
 
 
-#map {
-        height: 50%;
-        width: 50%;
-      }
+table {
+    
+    top: 7%;
+    align-content: center;
+
+}
+
 
 #map {
     height: 100%;
+    z-index: 0;
+    padding: 0;
   }
+
+.content, .search {
+    
+    z-index: 15;
+    position: absolute;
+    align-content: center;
+    
+}
 
   html, body {
     height: 100%;
     margin: 0;
-    padding: 0;
   }
+
+.content {
+    
+    font-size: 36px;
+}
+
