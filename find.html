@@ -12,14 +12,13 @@
   <title>NeighborGood</title>
   <div class="navbar">
     <a id="logo" href="#">NeighborGood</a>
-    <a id="nav" href="#home">Home</a>
-    <a id="nav" href="#news">News</a>
-    <a id="nav" href="#contact">Contact</a>
+    <a id="nav" href="/">Home</a>
+    <a id="nav" href="/findhouse.html">Find House</a>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
     function State(s){
-      var children = document.getElementByClass("district").children;
+      var children = document.getElementsByClassName("district");
       for(var x = 0; x < children.length; x++){
         children[x].style.display="none";
       }
@@ -29,7 +28,7 @@
   </script>
 </head>
 
-<body>
+<body style="margin:0px">
 <script>
 function doSomething() {
     alert('Form submitted!');
@@ -38,10 +37,10 @@ function doSomething() {
 </script>
     <div class="body">
       <form name="form" onsubmit="return doSomething()">
-        <input type="text" name="search" placeholder="Search..">
         <p>Pricing Range: </p>
-        <div class="select-style">
-          <select>
+        <div>
+          <select class="select-style">
+            <option selected disabled>Choose price</option>
             <option value="pricea">< $75,000</option>
             <option value="priceb">$75,000 - $100,000</option>
             <option value="pricec">$100,000 - $125,000</option>
@@ -56,260 +55,265 @@ function doSomething() {
         </div>
 
         <p>State:</p>
-        <select id="state" onchange="State(value)")>
-          <option selected disabled>Choose state</option>
-        	<option value="AL">Alabama</option>
-        	<option value="AK">Alaska</option>
-        	<option value="AZ">Arizona</option>
-        	<option value="AR">Arkansas</option>
-        	<option value="CA">California</option>
-        	<option value="CO">Colorado</option>
-        	<option value="CT">Connecticut</option>
-        	<option value="DE">Delaware</option>
-        	<option value="DC">District Of Columbia</option>
-        	<option value="FL">Florida</option>
-        	<option value="GA">Georgia</option>
-        	<option value="HI">Hawaii</option>
-        	<option value="ID">Idaho</option>
-        	<option value="IL">Illinois</option>
-        	<option value="IN">Indiana</option>
-        	<option value="IA">Iowa</option>
-        	<option value="KS">Kansas</option>
-        	<option value="KY">Kentucky</option>
-        	<option value="LA">Louisiana</option>
-        	<option value="ME">Maine</option>
-        	<option value="MD">Maryland</option>
-        	<option value="MA">Massachusetts</option>
-        	<option value="MI">Michigan</option>
-        	<option value="MN">Minnesota</option>
-        	<option value="MS">Mississippi</option>
-        	<option value="MO">Missouri</option>
-        	<option value="MT">Montana</option>
-        	<option value="NE">Nebraska</option>
-        	<option value="NV">Nevada</option>
-        	<option value="NH">New Hampshire</option>
-        	<option value="NJ">New Jersey</option>
-        	<option value="NM">New Mexico</option>
-        	<option value="NY">New York</option>
-        	<option value="NC">North Carolina</option>
-        	<option value="ND">North Dakota</option>
-        	<option value="OH">Ohio</option>
-        	<option value="OK">Oklahoma</option>
-        	<option value="OR">Oregon</option>
-        	<option value="PA">Pennsylvania</option>
-        	<option value="RI">Rhode Island</option>
-        	<option value="SC">South Carolina</option>
-        	<option value="SD">South Dakota</option>
-        	<option value="TN">Tennessee</option>
-        	<option value="TX">Texas</option>
-        	<option value="UT">Utah</option>
-        	<option value="VT">Vermont</option>
-        	<option value="VA">Virginia</option>
-        	<option value="WA">Washington</option>
-        	<option value="WV">West Virginia</option>
-        	<option value="WI">Wisconsin</option>
-        	<option value="WY">Wyoming</option>
-        </select>
-
+        <div>
+          <select id="state" onchange="State(value)" class="select-style">
+            <option selected disabled>Choose state</option>
+          	<option value="AL">Alabama</option>
+          	<option value="AK">Alaska</option>
+          	<option value="AZ">Arizona</option>
+          	<option value="AR">Arkansas</option>
+          	<option value="CA">California</option>
+          	<option value="CO">Colorado</option>
+          	<option value="CT">Connecticut</option>
+          	<option value="DE">Delaware</option>
+          	<option value="DC">District Of Columbia</option>
+          	<option value="FL">Florida</option>
+          	<option value="GA">Georgia</option>
+          	<option value="HI">Hawaii</option>
+          	<option value="ID">Idaho</option>
+          	<option value="IL">Illinois</option>
+          	<option value="IN">Indiana</option>
+          	<option value="IA">Iowa</option>
+          	<option value="KS">Kansas</option>
+          	<option value="KY">Kentucky</option>
+          	<option value="LA">Louisiana</option>
+          	<option value="ME">Maine</option>
+          	<option value="MD">Maryland</option>
+          	<option value="MA">Massachusetts</option>
+          	<option value="MI">Michigan</option>
+          	<option value="MN">Minnesota</option>
+          	<option value="MS">Mississippi</option>
+          	<option value="MO">Missouri</option>
+          	<option value="MT">Montana</option>
+          	<option value="NE">Nebraska</option>
+          	<option value="NV">Nevada</option>
+          	<option value="NH">New Hampshire</option>
+          	<option value="NJ">New Jersey</option>
+          	<option value="NM">New Mexico</option>
+          	<option value="NY">New York</option>
+          	<option value="NC">North Carolina</option>
+          	<option value="ND">North Dakota</option>
+          	<option value="OH">Ohio</option>
+          	<option value="OK">Oklahoma</option>
+          	<option value="OR">Oregon</option>
+          	<option value="PA">Pennsylvania</option>
+          	<option value="RI">Rhode Island</option>
+          	<option value="SC">South Carolina</option>
+          	<option value="SD">South Dakota</option>
+          	<option value="TN">Tennessee</option>
+          	<option value="TX">Texas</option>
+          	<option value="UT">Utah</option>
+          	<option value="VT">Vermont</option>
+          	<option value="VA">Virginia</option>
+          	<option value="WA">Washington</option>
+          	<option value="WV">West Virginia</option>
+          	<option value="WI">Wisconsin</option>
+          	<option value="WY">Wyoming</option>
+          </select>
+        </div>
           <div class="district" id="AL" style="display:none">
             <p>School District</p>
-            <select>
-              <option selected disabled>Choose district</option>
-              <option>Alabama Department of Youth Services Schools</option>
-              <option>Alabama School of Fine Arts</option>
-              <option>Albertville City Schools</option>
-              <option>Alexander City Schools</option>
-              <option>Andalusia City Schools</option>
-              <option>Anniston City Schools</option>
-              <option>Arab City Schools</option>
-              <option>Athens City Schools</option>
-              <option>Attalla City School System</option>
-              <option>Auburn City Schools</option>
-              <option>Autauga County School System</option>
-              <option>Baldwin County Public Schools</option>
-              <option>Barbour County School District</option>
-              <option>Bessemer City Schools</option>
-              <option>Bibb County School District</option>
-              <option>Birmingham City Schools</option>
-              <option>Blount County School District</option>
-              <option>Boaz City School District</option>
-              <option>Brewton City Schools</option>
-              <option>Bullock County School District</option>
-              <option>Butler County Schools</option>
-              <option>Calhoun County Schools</option>
-              <option>Chambers County School District</option>
-              <option>Cherokee County Schools</option>
-              <option>Chilton County School District</option>
-              <option>Choctaw County School District</option>
-              <option>Clarke County Schools</option>
-              <option>Clay County School District</option>
-              <option>Cleburne County School District</option>
-              <option>Coffee County School District</option>
-              <option>Colbert County Schools</option>
-              <option>Conecuh County School District</option>
-              <option>Coosa County School District</option>
-              <option>Covington County Board Of Education</option>
-              <option>Crenshaw County School District</option>
-              <option>Cullman City Schools</option>
-              <option>Cullman County Schools</option>
-              <option>Dale County School District</option>
-              <option>Daleville City School District</option>
-              <option>Dallas County School System</option>
-              <option>DeKalb County School System</option>
-              <option>Decatur City Schools</option>
-              <option>Demopolis City School District</option>
-              <option>Dothan City Schools</option>
-              <option>Elba City Schools</option>
-              <option>Elmore County Public Schools</option>
-              <option>Enterprise City Schools</option>
-              <option>Escambia County School District</option>
-              <option>Etowah County School System</option>
-              <option>Eufaula City Schools</option>
-              <option>Fairfield City Schools</option>
-              <option>Fayette County Schools</option>
-              <option>Florence City Schools</option>
-              <option>Fort Payne City Schools</option>
-              <option>Fort Rucker Schools</option>
-              <option>Franklin County School District</option>
-              <option>Gadsden City Schools</option>
-              <option>Geneva City School District</option>
-              <option>Geneva County School District</option>
-              <option>Greene County School District</option>
-              <option>Guntersville City School District</option>
-              <option>Hale County Schools</option>
-              <option>Haleyville City Schools</option>
-              <option>Hartselle City School District</option>
-              <option>Henry County School District</option>
-              <option>Homewood City School District</option>
-              <option>Hoover City Schools</option>
-              <option>Houston County Schools</option>
-              <option>Huntsville City Schools</option>
-              <option>Jackson County School District</option>
-              <option>Jacksonville City Schools</option>
-              <option>Jasper City Schools</option>
-              <option>Jefferson County Schools</option>
-              <option>Lamar County School District</option>
-              <option>Lanett City School District</option>
-              <option>Lauderdale County Schools</option>
-              <option>Lawrence County Schools</option>
-              <option>Lee County Schools</option>
-              <option>Leeds City School District</option>
-              <option>Limestone County School District</option>
-              <option>Linden City Schools</option>
-              <option>Lowndes County School District</option>
-              <option>Macon County School District</option>
-              <option>Madison City Schools</option>
-              <option>Madison County Schools</option>
-              <option>Marengo County School District</option>
-              <option>Marion County Schools</option>
-              <option>Marshall County School System</option>
-              <option>Midfield City School District</option>
-              <option>Mobile County Public Schools</option>
-              <option>Monroe County School District</option>
-              <option>Montgomery Public Schools</option>
-              <option>Morgan County Schools</option>
-              <option>Mountain Brook City Schools</option>
-              <option>Muscle Shoals City School District</option>
-              <option>Oneonta City School District</option>
-              <option>Opelika City Schools</option>
-              <option>Opp City School District</option>
-              <option>Oxford City Schools</option>
-              <option>Ozark City Schools</option>
-              <option>Pell City School District</option>
-              <option>Perry County School District</option>
-              <option>Phenix City Public Schools</option>
-              <option>Pickens County School District</option>
-              <option>Piedmont City School District</option>
-              <option>Pike County Schools</option>
-              <option>Randolph County School District</option>
-              <option>Roanoke City Schools</option>
-              <option>Russell County School District</option>
-              <option>Russellville City Schools</option>
-              <option>Sarahland Board of Education</option>
-              <option>Scottsboro City School District</option>
-              <option>Selma City School District</option>
-              <option>Sheffield City Schools</option>
-              <option>Shelby County Schools</option>
-              <option>St. Clair County Board Of Education</option>
-              <option>St. Clair County Schools</option>
-              <option>Sumter County School District</option>
-              <option>Sylacauga City Schools</option>
-              <option>Talladega City School District</option>
-              <option>Talladega County Schools</option>
-              <option>Tallapoosa County Schools</option>
-              <option>Tallassee City School District</option>
-              <option>Tarrant City Schools</option>
-              <option>Thomasville City Schools</option>
-              <option>Troy City School District</option>
-              <option>Trussville City Schools</option>
-              <option>Tuscaloosa City Schools</option>
-              <option>Tuscaloosa County School System</option>
-              <option>Tuscumbia City Schools</option>
-              <option>Vestavia Hills City Schools</option>
-              <option>Walker County Board of Education</option>
-              <option>Walker County Center Of Technology</option>
-              <option>Washington County School District</option>
-              <option>Wilcox County School District</option>
-              <option>Winfield City Schools</option>
-              <option>Winston County School System</option>
-            </select>
+            <div class="select-style">
+              <select class="select-style">
+                <option selected disabled>Choose district</option>
+                <option>Alabama Department of Youth Services Schools</option>
+                <option>Alabama School of Fine Arts</option>
+                <option>Albertville City Schools</option>
+                <option>Alexander City Schools</option>
+                <option>Andalusia City Schools</option>
+                <option>Anniston City Schools</option>
+                <option>Arab City Schools</option>
+                <option>Athens City Schools</option>
+                <option>Attalla City School System</option>
+                <option>Auburn City Schools</option>
+                <option>Autauga County School System</option>
+                <option>Baldwin County Public Schools</option>
+                <option>Barbour County School District</option>
+                <option>Bessemer City Schools</option>
+                <option>Bibb County School District</option>
+                <option>Birmingham City Schools</option>
+                <option>Blount County School District</option>
+                <option>Boaz City School District</option>
+                <option>Brewton City Schools</option>
+                <option>Bullock County School District</option>
+                <option>Butler County Schools</option>
+                <option>Calhoun County Schools</option>
+                <option>Chambers County School District</option>
+                <option>Cherokee County Schools</option>
+                <option>Chilton County School District</option>
+                <option>Choctaw County School District</option>
+                <option>Clarke County Schools</option>
+                <option>Clay County School District</option>
+                <option>Cleburne County School District</option>
+                <option>Coffee County School District</option>
+                <option>Colbert County Schools</option>
+                <option>Conecuh County School District</option>
+                <option>Coosa County School District</option>
+                <option>Covington County Board Of Education</option>
+                <option>Crenshaw County School District</option>
+                <option>Cullman City Schools</option>
+                <option>Cullman County Schools</option>
+                <option>Dale County School District</option>
+                <option>Daleville City School District</option>
+                <option>Dallas County School System</option>
+                <option>DeKalb County School System</option>
+                <option>Decatur City Schools</option>
+                <option>Demopolis City School District</option>
+                <option>Dothan City Schools</option>
+                <option>Elba City Schools</option>
+                <option>Elmore County Public Schools</option>
+                <option>Enterprise City Schools</option>
+                <option>Escambia County School District</option>
+                <option>Etowah County School System</option>
+                <option>Eufaula City Schools</option>
+                <option>Fairfield City Schools</option>
+                <option>Fayette County Schools</option>
+                <option>Florence City Schools</option>
+                <option>Fort Payne City Schools</option>
+                <option>Fort Rucker Schools</option>
+                <option>Franklin County School District</option>
+                <option>Gadsden City Schools</option>
+                <option>Geneva City School District</option>
+                <option>Geneva County School District</option>
+                <option>Greene County School District</option>
+                <option>Guntersville City School District</option>
+                <option>Hale County Schools</option>
+                <option>Haleyville City Schools</option>
+                <option>Hartselle City School District</option>
+                <option>Henry County School District</option>
+                <option>Homewood City School District</option>
+                <option>Hoover City Schools</option>
+                <option>Houston County Schools</option>
+                <option>Huntsville City Schools</option>
+                <option>Jackson County School District</option>
+                <option>Jacksonville City Schools</option>
+                <option>Jasper City Schools</option>
+                <option>Jefferson County Schools</option>
+                <option>Lamar County School District</option>
+                <option>Lanett City School District</option>
+                <option>Lauderdale County Schools</option>
+                <option>Lawrence County Schools</option>
+                <option>Lee County Schools</option>
+                <option>Leeds City School District</option>
+                <option>Limestone County School District</option>
+                <option>Linden City Schools</option>
+                <option>Lowndes County School District</option>
+                <option>Macon County School District</option>
+                <option>Madison City Schools</option>
+                <option>Madison County Schools</option>
+                <option>Marengo County School District</option>
+                <option>Marion County Schools</option>
+                <option>Marshall County School System</option>
+                <option>Midfield City School District</option>
+                <option>Mobile County Public Schools</option>
+                <option>Monroe County School District</option>
+                <option>Montgomery Public Schools</option>
+                <option>Morgan County Schools</option>
+                <option>Mountain Brook City Schools</option>
+                <option>Muscle Shoals City School District</option>
+                <option>Oneonta City School District</option>
+                <option>Opelika City Schools</option>
+                <option>Opp City School District</option>
+                <option>Oxford City Schools</option>
+                <option>Ozark City Schools</option>
+                <option>Pell City School District</option>
+                <option>Perry County School District</option>
+                <option>Phenix City Public Schools</option>
+                <option>Pickens County School District</option>
+                <option>Piedmont City School District</option>
+                <option>Pike County Schools</option>
+                <option>Randolph County School District</option>
+                <option>Roanoke City Schools</option>
+                <option>Russell County School District</option>
+                <option>Russellville City Schools</option>
+                <option>Sarahland Board of Education</option>
+                <option>Scottsboro City School District</option>
+                <option>Selma City School District</option>
+                <option>Sheffield City Schools</option>
+                <option>Shelby County Schools</option>
+                <option>St. Clair County Board Of Education</option>
+                <option>St. Clair County Schools</option>
+                <option>Sumter County School District</option>
+                <option>Sylacauga City Schools</option>
+                <option>Talladega City School District</option>
+                <option>Talladega County Schools</option>
+                <option>Tallapoosa County Schools</option>
+                <option>Tallassee City School District</option>
+                <option>Tarrant City Schools</option>
+                <option>Thomasville City Schools</option>
+                <option>Troy City School District</option>
+                <option>Trussville City Schools</option>
+                <option>Tuscaloosa City Schools</option>
+                <option>Tuscaloosa County School System</option>
+                <option>Tuscumbia City Schools</option>
+                <option>Vestavia Hills City Schools</option>
+                <option>Walker County Board of Education</option>
+                <option>Walker County Center Of Technology</option>
+                <option>Washington County School District</option>
+                <option>Wilcox County School District</option>
+                <option>Winfield City Schools</option>
+                <option>Winston County School System</option>
+              </select>
+            </div>
           </div>
           <div class="district" id="AK" style="display:none">
             <p>School District</p>
-            <select>
-              <option selected disabled>Choose district</option>
-              <option>Alaska Gateway School District</option>
-              <option>Aleutian Region School District</option>
-              <option>Aleutians East Borough School District</option>
-              <option>Anchorage School District</option>
-              <option>Annette Island School District</option>
-              <option>Bering Strait School District</option>
-              <option>Bristol Bay Borough School District</option>
-              <option>Chatham School District</option>
-              <option>Copper River School District</option>
-              <option>Cordova School District</option>
-              <option>Craig City School District</option>
-              <option>Delta/Greely School District</option>
-              <option>Denali Borough School District</option>
-              <option>Dillingham City School District</option>
-              <option>Fairbanks North Star Borough School District</option>
-              <option>Galena City School District</option>
-              <option>Haines Borough School District</option>
-              <option>Hoonah City School District</option>
-              <option>Hydaburg City School District</option>
-              <option>Iditarod Area School District</option>
-              <option>Juneau School District</option>
-              <option>Kake City School District</option>
-              <option>Kashunamiut School District</option>
-              <option>Kenai Peninsula Borough School District</option>
-              <option>Ketchikan Gateway Borough School District</option>
-              <option>Klawock City School District</option>
-              <option>Kodiak Island Borough School District</option>
-              <option>Kuspuk School District</option>
-              <option>Lake and Peninsula School District</option>
-              <option>Lower Kuskokwim School District</option>
-              <option>Lower Yukon School District</option>
-              <option>Matanuska-Susitna Borough School District</option>
-              <option>Nenana City School District</option>
-              <option>Nome Public Schools</option>
-              <option>North Slope Borough School District</option>
-              <option>Northwest Arctic Borough School District</option>
-              <option>Petersburg City School District</option>
-              <option>Pribilof School District</option>
-              <option>Saint Mary's School District</option>
-              <option>Sitka School District</option>
-              <option>Skagway City School District</option>
-              <option>Southeast Island School District</option>
-              <option>Southwest Region School District</option>
-              <option>Tanana School District</option>
-              <option>Unalaska City School District</option>
-              <option>Valdez City School District</option>
-              <option>Wrangell Public School District</option>
-              <option>Yakutat School District</option>
-              <option>Yukon-Koyukuk School District</option>
-              <option>Yukon Flats School District</option>
-              <option>Yupiit School District</option>
-            </select>
+            <div class="select-style">
+              <select class="select-style">
+                <option selected disabled>Choose district</option>
+                <option>Alaska Gateway School District</option>
+                <option>Aleutian Region School District</option>
+                <option>Aleutians East Borough School District</option>
+                <option>Anchorage School District</option>
+                <option>Annette Island School District</option>
+                <option>Bering Strait School District</option>
+                <option>Bristol Bay Borough School District</option>
+                <option>Chatham School District</option>
+                <option>Copper River School District</option>
+                <option>Cordova School District</option>
+                <option>Craig City School District</option>
+                <option>Delta/Greely School District</option>
+                <option>Denali Borough School District</option>
+                <option>Dillingham City School District</option>
+                <option>Fairbanks North Star Borough School District</option>
+                <option>Galena City School District</option>
+                <option>Haines Borough School District</option>
+                <option>Hoonah City School District</option>
+                <option>Hydaburg City School District</option>
+                <option>Iditarod Area School District</option>
+                <option>Juneau School District</option>
+                <option>Kake City School District</option>
+                <option>Kashunamiut School District</option>
+                <option>Kenai Peninsula Borough School District</option>
+                <option>Ketchikan Gateway Borough School District</option>
+                <option>Klawock City School District</option>
+                <option>Kodiak Island Borough School District</option>
+                <option>Kuspuk School District</option>
+                <option>Lake and Peninsula School District</option>
+                <option>Lower Kuskokwim School District</option>
+                <option>Lower Yukon School District</option>
+                <option>Matanuska-Susitna Borough School District</option>
+                <option>Nenana City School District</option>
+                <option>Nome Public Schools</option>
+                <option>North Slope Borough School District</option>
+                <option>Northwest Arctic Borough School District</option>
+                <option>Petersburg City School District</option>
+                <option>Pribilof School District</option>
+                <option>Saint Mary's School District</option>
+                <option>Sitka School District</option>
+                <option>Skagway City School District</option>
+                <option>Southeast Island School District</option>
+                <option>Southwest Region School District</option>
+                <option>Tanana School District</option>
+                <option>Unalaska City School District</option>
+                <option>Valdez City School District</option>
+                <option>Wrangell Public School District</option>
+                <option>Yakutat School District</option>
+                <option>Yukon-Koyukuk School District</option>
+                <option>Yukon Flats School District</option>
+                <option>Yupiit School District</option>
+              </select>
+            </div>
           </div>
 
           <div>

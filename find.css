@@ -20,11 +20,10 @@ body{
 #logo {
   float: left;
   font-size: 3em;
-  margin: 0;
   padding: .4em;
   text-decoration: none;
   color: rgb(205,240,240);
-  border-right: 10px solid rgb(250,250,230);
+  border-right: 10px solid rgb(255,255,253);
   transition: .5s all;
 }
 #logo:hover {
@@ -49,22 +48,39 @@ body{
     text-decoration: none;
 }
 
-/* Main content */
-.main {
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
-}
 #current {
   color: #ff4629;
   border-bottom: 3px solid #333;
 }
 
 .body {
-    z-index: 15;
-    padding-top: 100px;
-    text-align: center;
-    color: rgb(17,13,36);
-    background-color: rgba(255, 255, 255, 0.7);
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  z-index: 15;
+  padding-top: 100px;
+  text-align: center;
+  color: rgb(17,13,36);
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.select-style {
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid rgb(80,172,159);
+  width: 120px;
+  overflow: hidden;
+  background: #fafafa
+}
+
+.select-style select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.select-style select:focus {
+  outline: none;
 }
