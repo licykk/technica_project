@@ -2,7 +2,7 @@
 
 <html>
     
-    <link rel="stylesheet" href="MapTest.css">
+    <link rel="stylesheet" href="MapTest2.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     
    
@@ -20,54 +20,47 @@
     </header>
     
     
+    
+    <section class="container">
         
-        <table width="100%" height="100%">
+        <div class="left-half">
+            
+            <div id="map">
+        
+            <script>
+                var map;
+                
+                function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 38.9897, lng: -76.9378},
+                zoom: 8,
+                disableDefaultUI: true,
+                zoomControl: true,
+                scaleControl: true
+                });
+            }
+            
+            </script>
     
-    
-            <tr>
-                
-                <!-- Map -->
-                
-                <td class="left" position="fixed">
-                    
-                    <div id="map">
-                    <script>
-                      var map;
-                      function initMap() {
-                        map = new google.maps.Map(document.getElementById('map'), {
-                          center: {lat: 38.9072, lng: -77.0369},
-                          zoom: 11
-                        });
-                      }
-                    </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzOtWjGkVF7P2HqzYdsfTDtpWn6Wj-9Tk&callback=initMap"
-                    async defer></script>
-                    </div>
-                    
-                </td>
-                
-                
-                <!-- Search Tools -->
-                
-                <td class="right" style="overflow-y:scroll" align="center">
-                    
-                    <div class="content">
-
-                    <h3>Welcome to Maptest</h3>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsrtkg4yxBf5fkTMPYmfl568e363Dk4Ow&callback=initMap"
+    async defer></script>
+        
+    </div>
+            
+        </div>
+              
+        <div class="right-half" style="overflow-y: auto">
+            
+            <h3>Welcome to Maptest</h3>
                         
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-
-                    </div>
-                    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 
-                </td>
-            
-            
-            
-        </table>
-            
-
+        </div>
     
+    </section>
+    
+        
+        
     
 </body>
 
