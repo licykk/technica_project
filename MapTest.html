@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <link rel="stylesheet" href="Scout.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    
+   
+    
+<body>
+    
+     <header>
+       <a id="logo" href="#">SCOUT</a>
+        <nav>
+            <ul>
+              <li><a href="#" id="current">Home</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="content">
+    
+        <p>Hello</p>
+    
+    </div>
+    
+    <!-- Map -->
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 38.9072, lng: -77.0369},
+          zoom: 11
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzOtWjGkVF7P2HqzYdsfTDtpWn6Wj-9Tk&callback=initMap"
+    async defer></script>
+    
+    
+</body>
+
+
+</html>
