@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 
 <html>
-    
+
     <link rel="stylesheet" href="MapTest.css">
+    <link rel="stylesheet" href="find.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    
-   
-    
+<head>
+  <link rel="icon" type="image/png" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2017-11-05/ed0dbff775252b4abb5099ddaa18c7b3.ico.png">
+  <title>NeighborGood</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+
 <body>
-    
+
      <header>
        <a id="logo" href="#">NEIGHBORGOOD</a>
         <nav>
@@ -18,20 +23,20 @@
             </ul>
         </nav>
     </header>
-    
-    
-    
+
+
+
     <section class="container">
-        
+
         <div class="left-half">
-            
+
             <div id="map">
-        
+
             <script>
                 var map;
                 var service;
                 var infowindow;
-                
+
                 var initMap = function () {
                 map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: 42.36012, lng: -71.0589},
@@ -41,41 +46,42 @@
                 scaleControl: true
                 });
             };
-      
+
             </script>
-    
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsrtkg4yxBf5fkTMPYmfl568e363Dk4Ow&callback=initMap"
     async defer></script>
-        
+
     </div>
-            
+
         </div>
-              
+
         <div class="right-half" style="overflow-y: auto">
-            
+
             <h3>Welcome to NeighborGood</h3>
-                        
+
             <p>Neighborgood is a useful tool to find the home of your dreams. It is a home-search platform that uses such as crime, Walkscore (to measure), school, and other data (in addition to your basic home preferences) to determine the perfect living space for you (and your family, if you have one). </p>
-            
+
             <div class="search">
-            
-                <input type="text" name="search" placeholder="Search for Your Dream Home">
-            
+
+                <input type="text" name="search" placeholder="Search for Your Dream Home" style="background-color:#BBBBBB; border=#000000; color=#000000;">
+                <input type="submit" name="search"></input>
+
             </div>
-            
+
             <div class="parameters">
-            
-                
-            
+
+
+
             </div>
-                
+
         </div>
-    
+
     </section>
-    
-        
-        
-    
+
+
+
+
 </body>
 
 
