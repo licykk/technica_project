@@ -5,7 +5,7 @@
 
 <html>
 
-<link rel="stylesheet" href="someshit.css">
+<link rel="stylesheet" href="find.css">
 
 <head>
   <title>NeighborGood</title>
@@ -18,14 +18,11 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
     function State(s){
-      alert(s);
+      document.getElementById(s).style.visibility="visible";
     }
 
   </script>
 </head>
-
-
-
 
 <body>
 
@@ -103,9 +100,16 @@
         	<option value="WY">Wyoming</option>
         </select>
       </form>
+
+      <div id="MD" style="display:none">
+        <p>School District</p>
+        <select>
+          <<option value="MC">Montgomery County</option>
+        </select>
+      </div>
+
+
     </div>
-
-
 
 </body>
 
